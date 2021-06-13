@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>nsmiles</title>
+		<title>College Recommender</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- CSS only -->
@@ -42,26 +42,28 @@
 							</div>
 						</div>
 					</div>
-</nav> 
- <h3> Hello {{ user.username }} </h3>
+				</nav> 
 
 				<!-- Header -->
 					<header id="header">
-						<span class="avatar"><img src="{% static 'images/avatar.png' %}" alt="" /></span>
-						<h1>Welcome to the best <strong>College and Course Recommender</strong> platform</h1>
+						<div class = "container">
+							 <h3> Hello {{ user.username }} </h3>
+							
+							<h1 class = "display-6">Welcome to the best <strong>College and Course Recommender</strong> platform</h1>
 
-						<br/>
-						<div class="position-relative">
-							<div class="position-absolute top-0 start-50 translate-middle"> <h4> follow us on </h4></div>
-						</div>
-						<br/>
-						<div class="row">
-							<div class = "col-4"> </div> 
-							<div class = "col-1"><a href="#" ><span class="label"> <i class="fab fa-twitter"></i></span></a></div>
-							<div class = "col-1"><a href="#" ><span class="label"><i class="fab fa-facebook"></i></span></a></div>
-							<div class = "col-1"><a href="#" ><span class="label"><i class="fab fa-instagram"></i></span></a></div>
-							<div class = "col-1"><a href="#" ><span class="label"><i class="fab fa-linkedin-in"></i></span></a></div>
-							<div class = "col-4"> </div>
+							<br/>
+							<div class="position-relative">
+								<div class="position-absolute top-5 start-50 translate-middle"> <h4 class = "display-6"> follow us on </h4></div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class = "col-4"> </div> 
+								<div class = "col-1"><a href="#" ><span class="label"> <i class="fab fa-twitter"></i></span></a></div>
+								<div class = "col-1"><a href="#" ><span class="label"><i class="fab fa-facebook"></i></span></a></div>
+								<div class = "col-1"><a href="#" ><span class="label"><i class="fab fa-instagram"></i></span></a></div>
+								<div class = "col-1"><a href="#" ><span class="label"><i class="fab fa-linkedin-in"></i></span></a></div>
+								<div class = "col-4"> </div>
+							</div>
 						</div>
 					</header>
 
@@ -70,16 +72,16 @@
 				<p/>
 				<!-- Footer -->
 					<footer class="text-muted">
-  <div class="container">
-    
-    <p style="text-align: center;">capstone Project. &copy {% now "Y" %}</p>
-  </div>
-</footer>
+						<div class="container">
+							
+							<p style="text-align: center;">capstone Project. &copy {% now "Y" %}</p>
+						</div>
+					</footer>
 
 			</div>
 
 		<!-- Scripts -->
 			<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 	</body>
 </html>

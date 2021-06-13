@@ -5,48 +5,47 @@
 {{ error }}
 {% endif %}
 
-<h1> Sign up! </h1>
-<div>
-<form method="POST" action="{% url 'signup' %}">
-{% csrf_token %}
-	<div class = "row">
-	<div class = "col-5">
-	First Name: <br>
-	<input type="text" name="firstname"/>
+<div class="col-md-10 mx-auto col-lg-5">
+	<div class = "d-inline-flex p-2">
+		<h6 class = "display-6"> Sign Up! </h6>
 	</div>
-	<div class = "col-5">
-	Last Name:<br>
-	<input type="text" name="lastname"/>
-	</div>
-	</div>
-	<div class = "row">
-	<div class = "col-5">
-	Username: <br>
-	<input type="text" name="username" />
-	</div>
-	<div class = "col-5">
-	Email : <br>
-	<input type="Email" name="emailid"/>
-	</div>
-	</div>
-	<div class = "row">
-	<div class = "col-5">
-	Password: <br>
-	<input type="Password" name="password1" />
-	</div>
-	<div class = "col-5">
-	Confirm Password: <br>
-	<input type="Password" name="password2" />
-	</div>
-	</div>
-	<p>
-	<div class="row">
-	<div class = "col-12">	
-	<input class="btn btn-primary" type="submit" value="Sign me Up">
-	</div>
-	</div>
-</form>
-</div>
+        <form class="p-4 p-md-5 border rounded-3 bg-light" method = "POST" action = "{% url 'signup' %}">
+		{% csrf_token %}
+		<div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" name ="firstname">
+            <label for="floatingInput">FirstName</label>
+          </div>
+		  <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" name ="lastname">
+            <label for="floatingInput">Last Name</label>
+          </div>
+		<div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" name ="username">
+            <label for="floatingInput">Username</label>
+          </div>
+		  <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" name ="emailid">
+            <label for="floatingInput">Email</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="password1" name = "password1">
+            <label for="floatingPassword">Password</label>
+          </div>
+		  <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="password2" name = "password2">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+		  
+        </form>
+		<p>
+	<br>
+	Have an account?
+	<a href = "{% url 'login' %}"><input class="btn btn-primary" type="submit" value="Login"></a>
+</p>
+      </div>
+
+
 
 
 
