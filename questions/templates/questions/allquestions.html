@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+        <h1> all questions </h1>
+        
+        {% if user.is_authenticated %}
+        <p> hi {{request.user}} </p>
+      <a class="nav-item nav-link" href="javascript: {document.getElementById('logout').submit()}">Logout</a>
+      <form id ="logout" method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <input type="hidden" />
+      </form>
+      {% else %}
+      <a class="nav-item nav-link" href="{% url 'signup' %}">Sign up <span class="sr-only"></span></a>
+      <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+      {% endif %}
+        <ul>
+            {% for question in questions %}
+            <li> <a href = "{% url 'questions:detail' question.id %}"> {{question.question_text}} </a> </li>
+            {% endfor %}
+        </ul>
+        
+
+{% endblock %}
