@@ -9,11 +9,13 @@ class Question(models.Model):
 
 class Choices(models.Model):
     question = models.ManyToManyField(Question)
-    choice_text = models.CharField(max_length = 200)
+    choice_text = models.IntegerField()
     #votes = models.ManyToManyField(User, blank = True, default=None)
 
     def __str__(self):
         return self.choice_text
+    def __int__(self):
+        return int(self.choice_text)
 
 class Vote(models.Model):
     user = models.ForeignKey(User, on_delete = models.CASCADE, default = 1)
